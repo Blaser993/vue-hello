@@ -8,11 +8,16 @@
 </head>
 <body>
 
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 <div id="app">
-    <h1>{{ message }}</h1>
-</div>
+    <h1>
+        {{ message }}
+    </h1>
+    <img v-bind:src="image" />
+
+   
 
 <script>
   const { createApp } = Vue
@@ -20,11 +25,15 @@
   createApp({
     data() {
       return {
-        message: 'Questo è il logo di VUE!'
+        message: 'Hello Vue!',
+        image: "./img/png-transparent-vue-js-hd-logo-thumbnail.png"
       }
+
     }
   }).mount('#app')
 </script>
+
+
     
 </body>
 </html>
